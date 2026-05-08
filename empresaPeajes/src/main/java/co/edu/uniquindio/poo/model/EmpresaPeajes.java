@@ -1,6 +1,8 @@
 package co.edu.uniquindio.poo.model;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class EmpresaPeajes {
 
@@ -55,4 +57,22 @@ public class EmpresaPeajes {
     public void setListaPersonas(List<Persona> listaPersonas) {
         this.listaPersonas = listaPersonas;
     }
+
+    /*Verificar todos los vehiculos tipo camion con mayor o igual peso a X
+    * y que haya pagado mas de X peajes
+    */
+    public List<Vehiculo> buscarCamionesPorPesoYPeajes(double peso,int numeroPeajes){
+        List<Vehiculo> listaVehiculosFinal = new ArrayList<>();
+        for(Vehiculo camionAux:listaVehiculos){
+            if(camionAux instanceof Camion){
+                if(((Camion) camionAux).verificarCantidadPeajes(numeroPeajes) &&
+                        ((Camion) camionAux).verificarPeso(peso)){
+                    listaVehiculosFinal.add(camionAux);
+                }
+            }
+        }
+        return listaVehiculosFinal;
+
+    }
+
 }

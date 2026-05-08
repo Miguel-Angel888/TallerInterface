@@ -35,4 +35,18 @@ public class Camion extends Vehiculo{
     public void setNumeroEjes(int numeroEjes) {
         this.numeroEjes = numeroEjes;
     }
+    //Verifica que el camion tenga mas de x peso
+    public boolean verificarPeso(double peso){
+        if(this.capacidadCarga >= peso){
+            return true;
+        }
+        return false;
+    }
+    //Verifica que el vehiculo haya pagado mas de x peajes
+    public boolean verificarCantidadPeajes(int numeroPeajesPagados){
+        if(this.getNumeroPeajes() >= numeroPeajesPagados){
+            return true;
+        }
+        return false;
+    }
 }
