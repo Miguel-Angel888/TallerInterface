@@ -13,8 +13,9 @@ public class Camion extends Vehiculo{
     //Constructor
 
     public Camion(String placa, int numeroPeajes, List<RegistroPeaje> listaRegistroPeajes,
-                  Propietario propietario, double capacidadCarga, int numeroEjes) {
-        super(placa, numeroPeajes, listaRegistroPeajes, propietario);
+                  Propietario propietario, double capacidadCarga,
+                  int numeroEjes,double valorPeaje) {
+        super(placa, numeroPeajes, listaRegistroPeajes, propietario,valorPeaje);
         this.capacidadCarga = capacidadCarga;
         this.numeroEjes = numeroEjes;
     }
@@ -48,5 +49,15 @@ public class Camion extends Vehiculo{
             return true;
         }
         return false;
+    }
+    //metodo para calcular el valor final del peaje
+    public double calcularPeajeFinal(){
+        double valorPeajeInicial = getValorPeaje();
+        double valorFinal = valorPeajeInicial*numeroEjes;
+
+        if(this.capacidadCarga > 10){
+            valorFinal = valorFinal+(valorFinal*10)/100;
+        }
+        return valorFinal;
     }
 }

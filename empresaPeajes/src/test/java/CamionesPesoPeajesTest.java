@@ -28,12 +28,12 @@ public class CamionesPesoPeajesTest {
         List<Vehiculo> listaVehiculosTest = new ArrayList<>();
         List<Vehiculo> listaVehiculosVerdadera = new ArrayList<>();
 
-        Vehiculo camion = new Camion(null, 10, null, null, 100, 0);
-        Vehiculo camion1 = new Camion(null, 5, null, null, 15, 0);
-        Vehiculo camion2 = new Camion(null, 1, null, null, 15, 0);
-        Vehiculo camion3 = new Camion(null, 5, null, null, 5, 0);
-        Vehiculo camion4 = new Camion(null,0,null,null,1,0);
-        Vehiculo moto = new Moto(null,10,null,null,200);
+        Vehiculo camion = new Camion(null, 10, null,null, 100, 0,0);
+        Vehiculo camion1 = new Camion(null, 5, null, null, 15, 0,00);
+        Vehiculo camion2 = new Camion(null, 1, null, null, 15, 0,0);
+        Vehiculo camion3 = new Camion(null, 5, null, null, 5, 0,0);
+        Vehiculo camion4 = new Camion(null,0,null,null,1,0,0);
+        Vehiculo moto = new Moto(null,10,null,null,200,0);
 
         listaVehiculosTest.add(camion);
         listaVehiculosTest.add(camion1);

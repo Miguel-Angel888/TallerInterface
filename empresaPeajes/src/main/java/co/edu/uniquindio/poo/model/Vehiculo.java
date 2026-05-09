@@ -6,6 +6,7 @@ public abstract class Vehiculo {
     //Atributos
     private String placa;
     private int numeroPeajes;
+    private double valorPeaje;
 
     //Relaciones
     private List<RegistroPeaje> listaRegistroPeajes;
@@ -14,13 +15,23 @@ public abstract class Vehiculo {
     //Constructor
 
     public Vehiculo(String placa, int numeroPeajes,
-                    List<RegistroPeaje> listaRegistroPeajes, Propietario propietario) {
+                    List<RegistroPeaje> listaRegistroPeajes,
+                    Propietario propietario,double valorPeaje) {
         this.placa = placa;
         this.numeroPeajes = numeroPeajes;
         this.listaRegistroPeajes = listaRegistroPeajes;
         this.propietario = propietario;
+        this.valorPeaje=valorPeaje;
     }
     //Getters y Setters
+
+    public double getValorPeaje() {
+        return valorPeaje;
+    }
+
+    public void setValorPeaje(double valorPeaje) {
+        this.valorPeaje = valorPeaje;
+    }
 
     public String getPlaca() {
         return placa;
